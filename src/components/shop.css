@@ -1,0 +1,10 @@
+main {
+  background-color: gray;
+  min-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  flex-grow: 1;
+}
+/* article {
+  background-color: green;
+} */

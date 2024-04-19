@@ -1,0 +1,10 @@
+article {
+  max-width: 250px;
+  max-height: 250px;
+  border: 1px solid black;
+  padding: 2rem;
+}
+img {
+  object-fit: contain;
+  max-height: 50%;
+}

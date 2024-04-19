@@ -1,3 +1,8 @@
+import { useOutletContext } from "react-router-dom";
+
 export default function Home() {
-  return <div>home page</div>;
+  const [inventory, error, loading] = useOutletContext();
+
+  console.log(inventory);
+  return <div>home page {`${error}`}</div>;
 }

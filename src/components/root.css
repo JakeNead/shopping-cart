@@ -36,14 +36,32 @@ h6 {
 }
 
 /*-------- reset above --------*/
+:root {
+}
+
+body {
+  height: 100vh;
+}
+
 #root {
   min-height: 100vh;
   min-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   background-color: grey;
+  display: flex;
+}
+ul {
+  list-style-type: none;
+}
+li * {
+  text-decoration: none;
+  color: black;
 }
 .active {
-  background-color: purple;
+  /* background-color: lightgray; */
+  text-decoration: underline;
 }
