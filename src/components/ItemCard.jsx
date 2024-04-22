@@ -2,7 +2,6 @@ import "./itemCard.css";
 import { useState } from "react";
 
 export default function ItemCard({ item, addToCart }) {
-  const [quantity, setQuantity] = useState(1);
   return (
     <article>
       <img src={item.image} alt={item.title} />
@@ -10,7 +9,13 @@ export default function ItemCard({ item, addToCart }) {
       <p>${item.price}</p>
       <form action="" data-id={item.id} onSubmit={addToCart}>
         <label htmlFor="quantity">
-          <input type="number" id="quantity" min="1" max="10" />
+          <input
+            type="number"
+            id="quantity"
+            defaultValue="1"
+            min="1"
+            max="10"
+          />
         </label>
         <button>Add to cart</button>
       </form>
