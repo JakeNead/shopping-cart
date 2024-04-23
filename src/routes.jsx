@@ -1,8 +1,8 @@
-import Root from "./components/Root";
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
-import About from "./components/About";
+import Root from "./components/root/Root";
+import Home from "./components/home/Home";
+import Shop from "./components/shop/Shop";
+import Cart from "./components/cart/Cart";
+import About from "./components/about/About";
 import Error from "./components/Error";
 import { createBrowserRouter } from "react-router-dom";
 

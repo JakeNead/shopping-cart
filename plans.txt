@@ -7,6 +7,7 @@ footer: fake links to about us, careers, etc
 Do-List
 X Routers
 X state height
-- fetch
+X fetch
+- cart
 - components
 - style

@@ -1,0 +1,23 @@
+main {
+  background-color: rgb(182, 181, 183);
+  width: 100%;
+}
+.inventoryContainer {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  flex-grow: 1;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+article {
+  background-color: #e6e6e6;
+}
+
+img {
+  /* padding: 24px; */
+  /* background-color: white; */
+  /* border: 10px solid white; */
+  /* border-radius: 50%; */
+}
