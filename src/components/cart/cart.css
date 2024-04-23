@@ -1,0 +1,8 @@
+.subtotal,
+.shipping {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  padding: 0.8rem;
+}
