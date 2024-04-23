@@ -3,7 +3,7 @@ import ItemCard from "./ItemCard";
 import "./shop.css";
 
 export default function Shop() {
-  const [inventory, error, loading, cart, addToCart] = useOutletContext();
+  const { inventory, error, loading, cart, addToCart } = useOutletContext();
   if (error) return <p>A network error was encountered</p>;
   if (loading) return <p>Loading...</p>;
 
