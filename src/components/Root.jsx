@@ -26,12 +26,10 @@ export default function Root() {
   function addToCart(e) {
     e.preventDefault();
     const newCart = [...cart];
-    console.log(cart);
-    console.log(newCart);
-    // look for selected item in cart
-    const itemToUpdate = newCart.find((item) => {
-      item.id === Number(e.target.dataset.id);
-    });
+
+    const itemToUpdate = newCart.find(
+      (item) => item.id === Number(e.target.dataset.id)
+    );
 
     // if in cart
     if (itemToUpdate) {
