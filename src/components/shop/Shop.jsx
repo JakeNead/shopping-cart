@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import ItemCard from "./ItemCard";
-import "./shop.css";
+import shop from "./shop.module.css";
 
 export default function Shop() {
   const { inventory, error, loading, cart, addToCart } = useOutletContext();
@@ -9,7 +9,7 @@ export default function Shop() {
 
   return (
     <main>
-      <div className="inventoryContainer">
+      <div className={shop.inventoryContainer}>
         {inventory.map((obj) => (
           <ItemCard key={obj.id} item={obj} addToCart={addToCart} />
         ))}

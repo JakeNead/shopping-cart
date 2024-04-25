@@ -1,10 +1,10 @@
-import "./itemCard.css";
+import itemCard from "./itemCard.module.css";
 import { useState } from "react";
 
 export default function ItemCard({ item, addToCart }) {
   return (
     <article>
-      <div className="imageContainer">
+      <div className={itemCard.imageContainer}>
         <img src={item.image} alt={item.title} />
       </div>
       <h3>{item.title}</h3>

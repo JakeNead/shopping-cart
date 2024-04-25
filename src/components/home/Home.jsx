@@ -1,7 +1,12 @@
 import { useOutletContext } from "react-router-dom";
+import home from "./home.module.css";
 
 export default function Home() {
-  const [inventory, error, loading] = useOutletContext();
+  const { inventory, error, loading } = useOutletContext();
 
-  return <div>home page {`${error}`}</div>;
+  return (
+    <main>
+      <div>home page {`${error}`}</div>
+    </main>
+  );
 }

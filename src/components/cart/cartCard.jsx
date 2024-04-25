@@ -1,4 +1,4 @@
-import "./cartCard.css";
+import cartCard from "./cartCard.module.css";
 
 export default function CartCard({ handleChange, handleDelete, item }) {
   return (

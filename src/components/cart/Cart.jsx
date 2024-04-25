@@ -1,6 +1,6 @@
 import CartCard from "./CartCard";
 import { useOutletContext, Link } from "react-router-dom";
-import "./cart.css";
+import cart from "./cart.module.css";
 
 export default function Cart() {
   const { cart, cartTotal, handleCartChange, handleCartDelete } =
@@ -25,13 +25,13 @@ export default function Cart() {
             If you have a FakeStore account, be sure to <b>Sign In </b>to see
             your personal shopping cart.
           </p>
-          <Link to={"shop"}>
+          <Link to={"/shop"}>
             <button>Continue Shopping</button>
           </Link>
         </>
       ) : (
         <>
-          <div className="cartItems">
+          <div className={cart.cartItems}>
             {cart.map((item) => (
               <CartCard
                 key={item.id}
@@ -41,15 +41,16 @@ export default function Cart() {
               />
             ))}
           </div>
-          <div className="orderSummary">
-            <div className="subtotal">
+          <div className={cart.orderSummary}>
+            <div className={cart.subtotal}>
               <p>Subtotal ({cartTotal()} items)</p>
               <p>${subTotalPrice()}</p>
             </div>
-            <div className="shipping">
+            <div className={cart.shipping}>
               <p>Shipping</p>
               <p>{subTotalPrice() > 50 ? "free" : "$9.95"}</p>
             </div>
+            <button>Secure Checkout</button>
           </div>
         </>
       )}
