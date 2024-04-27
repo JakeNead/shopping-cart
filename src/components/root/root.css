@@ -65,18 +65,18 @@ nav {
   align-items: center;
   padding: 1rem;
 }
-ul {
+.navLinks {
   list-style-type: none;
   display: flex;
   gap: 1rem;
   padding: 0;
+  display: none;
 }
 li * {
   text-decoration: none;
   color: black;
 }
 .active {
-  /* background-color: lightgray; */
   text-decoration: underline;
 }
 
@@ -90,22 +90,16 @@ li * {
   color: black;
 }
 
-/* .cartTotalContainer {
-  position: absolute;
-  background-color: red;
-  top: 2px;
-  right: -5px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.cartTotal {
-}
-
 svg {
   fill: rgb(24, 24, 24);
+}
+
+main {
+  flex-grow: 1;
+}
+
+@media (min-width: 500px) {
+  .navLinks {
+    display: flex;
+  }
 }
