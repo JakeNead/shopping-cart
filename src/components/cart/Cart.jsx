@@ -1,6 +1,6 @@
 import CartCard from "./CartCard";
 import { useOutletContext, Link } from "react-router-dom";
-import cart from "./cart.module.css";
+import style from "./cart.module.css";
 
 export default function Cart() {
   const { cart, cartTotal, handleCartChange, handleCartDelete } =
@@ -13,25 +13,31 @@ export default function Cart() {
     }
   }
   return (
-    <main>
+    <main className={style.main}>
       {cart.length === 0 ? (
         <>
-          <h2>Your Shopping Cart is empty</h2>
-          <p>
-            Your cart currently has nothing in it. Which means there's plenty of
-            room for all of the amazing items you could possibly want!
-          </p>
-          <p>
-            If you have a FakeStore account, be sure to <b>Sign In </b>to see
-            your personal shopping cart.
-          </p>
-          <Link to={"/shop"}>
-            <button>Continue Shopping</button>
-          </Link>
+          <div className={style.emptyCartContainer}>
+            <h2 className={style.emptyCartHeader}>
+              Your Shopping Cart is empty
+            </h2>
+            <p className={style.emptyCartinfo}>
+              Your cart currently has nothing in it. Which means there's plenty
+              of room for all of the amazing items you could possibly want!
+            </p>
+            <p className={style.emptyCartSignIn}>
+              If you have a FakeStore account, be sure to <b>Sign In </b>to see
+              your personal shopping cart.
+            </p>
+            <Link to={"/shop"}>
+              <button className={style.emptyCartShopButton}>
+                Continue Shopping
+              </button>
+            </Link>
+          </div>
         </>
       ) : (
         <>
-          <div className={cart.cartItems}>
+          <div className={style.cartItems}>
             {cart.map((item) => (
               <CartCard
                 key={item.id}
@@ -41,16 +47,16 @@ export default function Cart() {
               />
             ))}
           </div>
-          <div className={cart.orderSummary}>
-            <div className={cart.subtotal}>
+          <div className={style.orderSummary}>
+            <div className={style.subtotal}>
               <p>Subtotal ({cartTotal()} items)</p>
               <p>${subTotalPrice()}</p>
             </div>
-            <div className={cart.shipping}>
+            <div className={style.shipping}>
               <p>Shipping</p>
               <p>{subTotalPrice() > 50 ? "free" : "$9.95"}</p>
             </div>
-            <button>Secure Checkout</button>
+            <button className={style.button}>Secure Checkout</button>
           </div>
         </>
       )}

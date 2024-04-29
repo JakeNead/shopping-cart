@@ -37,6 +37,12 @@ h6 {
 
 /*-------- reset above --------*/
 :root {
+  --dark-font-color: hsl(0, 0%, 0%);
+  --light-font-color: hsl(0, 0%, 100%);
+  --light-background-color: hsl(0, 0%, 90%);
+  --dark-background-color: hsl(0, 0%, 85%);
+  --highlight-color: hsl(120, 100%, 25%);
+  --button-background-color: hsl(105, 81%, 25%);
 }
 
 body {
@@ -52,7 +58,7 @@ body {
 }
 
 header {
-  background-color: #e6e6e6;
+  background-color: var(--light-background-color);
   display: flex;
   justify-content: center;
 }
@@ -74,7 +80,7 @@ nav {
 }
 li * {
   text-decoration: none;
-  color: black;
+  color: var(--font);
 }
 .active {
   text-decoration: underline;
@@ -87,11 +93,11 @@ li * {
 }
 
 .cartTotal {
-  color: black;
+  color: var(--dark-font-color);
 }
 
-svg {
-  fill: rgb(24, 24, 24);
+header svg {
+  fill: var(--dark-font-color);
 }
 
 main {

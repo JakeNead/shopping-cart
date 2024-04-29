@@ -1,13 +1,13 @@
-import cartCard from "./cartCard.module.css";
+import style from "./cartCard.module.css";
 
 export default function CartCard({ handleChange, handleDelete, item }) {
   return (
-    <article>
-      <div className="cardTop">
-        <div className="imageContainer">
+    <article className={style.article}>
+      <div className={style.cardTop}>
+        <div className={style.imageContainer}>
           <img src={item.image} alt={item.title} />
         </div>
-        <div className="itemInfo">
+        <div className={style.itemInfo}>
           <h3>{item.title}</h3>
           <p>${item.price}</p>
         </div>
@@ -24,7 +24,7 @@ export default function CartCard({ handleChange, handleDelete, item }) {
             onChange={handleChange}
           />
         </label>
-        <button>Delete</button>
+        <button className={style.button}>Delete</button>
       </form>
     </article>
   );

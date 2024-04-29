@@ -25,7 +25,6 @@ export default function Root() {
   function addToCart(e) {
     e.preventDefault();
     const newCart = [...cart];
-
     const itemToUpdate = newCart.find(
       (item) => item.id === Number(e.target.dataset.id)
     );
@@ -53,14 +52,24 @@ export default function Root() {
   }
 
   function handleCartChange(e) {}
-  function handleCartDelete() {}
+  function handleCartDelete(e) {
+    e.preventDefault();
+    const newCart = [...cart];
+    let indexToDelete = newCart.findIndex(
+      (obj) => obj.id === e.target.dataset.id
+    );
+    if (indexToDelete !== -1) {
+      newCart.splice(indexToDelete, 1);
+    }
+    setCart(newCart);
+  }
 
   return (
     <>
       <header>
         <nav>
           <h1>FakeStore</h1>
-          <ul>
+          <ul className="navLinks">
             <li>
               <NavLink to={"home"}>Home</NavLink>
             </li>

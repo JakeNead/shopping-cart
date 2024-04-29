@@ -1,7 +1,7 @@
+@import url(../root/root.css);
+
 .homeMain {
-  /* flex-grow: 1;
-  display: flex;
-  flex-direction: column; */
+  text-align: center;
 }
 
 .heroContainer {
@@ -23,7 +23,7 @@
 }
 
 .heroText {
-  color: white;
+  color: var(--light-font-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +41,7 @@
   padding: 10px 15px;
   border-radius: 10000px;
   border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {

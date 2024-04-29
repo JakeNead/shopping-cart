@@ -1,9 +1,12 @@
-article {
-  /* max-width: 250px; */
-  /* max-height: 100%; */
-  /* border: 1px solid black; */
-  padding: 2rem;
+@import url(../root/root.css);
+
+.article {
+  padding: 1rem;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--light-background-color);
 }
 
 .imageContainer {
@@ -15,7 +18,29 @@ article {
   align-items: center;
 }
 
-img {
+.cardImage {
   object-fit: contain;
   max-height: 160px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.addToCart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  color: var(--light-font-color);
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 9999px;
+  padding: 5px 10px;
+  text-wrap: nowrap;
 }

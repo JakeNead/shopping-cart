@@ -1,8 +1,53 @@
-main {
-  flex-grow: 1;
-}
+@import url(../root/root.css);
 
 form {
   display: flex;
   justify-content: space-between;
+}
+.cardImage {
+  object-fit: contain;
+  max-height: 160px;
+}
+
+.article {
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--light-background-color);
+  max-width: 300px;
+}
+
+.imageContainer {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.button {
+  color: var(--light-font-color);
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 9999px;
+  padding: 5px 10px;
+  text-wrap: nowrap;
+}
+
+@media (min-width: 500px) {
+  .article {
+    max-width: 250px;
+  }
 }

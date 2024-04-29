@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="shop-now" className={style.callToAction}>
+        <section className={style.callToAction}>
           <h2>Ready to Explore?</h2>
           <p>Start browsing our wide selection of products now!</p>
         </section>
