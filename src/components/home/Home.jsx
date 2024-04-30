@@ -20,46 +20,15 @@ export default function Home() {
         </section>
 
         <section className={style.callToAction}>
-          <h2>Ready to Explore?</h2>
-          <p>Start browsing our wide selection of products now!</p>
-        </section>
-
-        <section id="products">
-          <div className="product">
-            <img src="clothing.jpg" alt="Clothing"></img>
-            <h3>Clothing</h3>
-            <p>
-              Explore our latest collection of trendy clothing for all
-              occasions.
-            </p>
-            <a href="/clothing" className="btn btn-primary">
-              View Clothing
-            </a>
-          </div>
-
-          <div className="product">
-            <img src="electronics.jpg" alt="Electronics"></img>
-            <h3>Electronics</h3>
-            <p>Discover cutting-edge electronics to elevate your tech game.</p>
-            <a href="/electronics" className="btn btn-primary">
-              View Electronics
-            </a>
-          </div>
-
-          <div className="product">
-            <img src="jewelry.jpg" alt="Jewelry"></img>
-            <h3>Jewelry</h3>
-            <p>Find exquisite jewelry pieces to add sparkle to your look.</p>
-            <a href="/jewelry" className="btn btn-primary">
-              View Jewelry
-            </a>
-          </div>
+          <h2>Free shipping on orders over $50</h2>
+          <p>
+            Whether you're stocking up on essentials or treating yourself to
+            something special, enjoy our free shipping on us with orders over
+            $50! Shop with us today and take advantage of our free shipping
+            offer to make your online shopping experience even more rewarding!
+          </p>
         </section>
       </main>
     </>
   );
 }
-
-// <main>
-//   <div>style page {`${error}`}</div>
-// </main>
