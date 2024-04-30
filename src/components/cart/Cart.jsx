@@ -3,13 +3,13 @@ import { useOutletContext, Link } from "react-router-dom";
 import style from "./cart.module.css";
 
 export default function Cart() {
-  const { cart, cartTotal, handleCartChange, handleCartDelete } =
+  const { cart, cartTotal, handleCartChange, handleCartDelete, fixPrice } =
     useOutletContext();
 
   function subTotalPrice() {
     if (cart) {
       let price = cart.reduce((a, c) => a + c.quantity * c.price, 0);
-      return price;
+      return Number(price.toFixed(2));
     }
   }
   return (
@@ -44,6 +44,7 @@ export default function Cart() {
                 item={item}
                 handleChange={handleCartChange}
                 handleDelete={handleCartDelete}
+                fixPrice={fixPrice}
               />
             ))}
           </div>

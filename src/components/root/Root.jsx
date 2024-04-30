@@ -51,17 +51,36 @@ export default function Root() {
     return total;
   }
 
-  function handleCartChange(e) {}
+  function handleCartChange(e) {
+    e.preventDefault();
+    const newCart = [...cart];
+    let indexToUpdate = newCart.findIndex(
+      (obj) => obj.id === Number(e.target.dataset.id)
+    );
+    newCart[indexToUpdate].quantity = e.target.value;
+    setCart(newCart);
+  }
+
   function handleCartDelete(e) {
     e.preventDefault();
     const newCart = [...cart];
     let indexToDelete = newCart.findIndex(
-      (obj) => obj.id === e.target.dataset.id
+      (obj) => obj.id === Number(e.target.dataset.id)
     );
     if (indexToDelete !== -1) {
       newCart.splice(indexToDelete, 1);
     }
     setCart(newCart);
+  }
+
+  function fixPrice(n) {
+    let priceArray = n.toString().split(".");
+    if (priceArray.length === 1) {
+      return `${priceArray}.00`;
+    } else if (priceArray[1].length < 2) {
+      return `${priceArray[0]}.${priceArray[1]}0`;
+    }
+    return n;
   }
 
   return (
@@ -106,6 +125,7 @@ export default function Root() {
           addToCart,
           handleCartDelete,
           handleCartChange,
+          fixPrice,
         }}
       />
       <Footer />

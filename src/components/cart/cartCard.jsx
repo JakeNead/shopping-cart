@@ -1,6 +1,11 @@
 import style from "./cartCard.module.css";
 
-export default function CartCard({ handleChange, handleDelete, item }) {
+export default function CartCard({
+  handleChange,
+  handleDelete,
+  item,
+  fixPrice,
+}) {
   return (
     <article className={style.article}>
       <div className={style.cardTop}>
@@ -9,13 +14,14 @@ export default function CartCard({ handleChange, handleDelete, item }) {
         </div>
         <div className={style.itemInfo}>
           <h3>{item.title}</h3>
-          <p>${item.price}</p>
+          <p>${fixPrice(item.price)}</p>
         </div>
       </div>
 
       <form action="" data-id={item.id} onSubmit={handleDelete}>
         <label htmlFor="quantity">
           <input
+            data-id={item.id}
             type="number"
             id="quantity"
             defaultValue={item.quantity}

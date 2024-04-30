@@ -3,7 +3,7 @@ import ItemCard from "./ItemCard";
 import style from "./shop.module.css";
 
 export default function Shop() {
-  const { inventory, error, loading, cart, addToCart } = useOutletContext();
+  const { inventory, error, loading, addToCart, fixPrice } = useOutletContext();
   if (error) return <p>A network error was encountered</p>;
   if (loading) return <p>Loading...</p>;
 
@@ -11,7 +11,12 @@ export default function Shop() {
     <main className={style.main}>
       <div className={style.inventoryContainer}>
         {inventory.map((obj) => (
-          <ItemCard key={obj.id} item={obj} addToCart={addToCart} />
+          <ItemCard
+            key={obj.id}
+            item={obj}
+            addToCart={addToCart}
+            fixPrice={fixPrice}
+          />
         ))}
       </div>
     </main>
