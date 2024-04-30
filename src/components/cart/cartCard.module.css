@@ -19,6 +19,12 @@ form {
   max-width: 300px;
 }
 
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .imageContainer {
   background-color: white;
   padding: 1rem;
