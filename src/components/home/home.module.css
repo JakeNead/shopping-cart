@@ -2,10 +2,15 @@
 
 .homeMain {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-background-color);
 }
 
 .heroContainer {
   height: 30rem;
+  width: 100%;
   position: relative;
   background-image: url(../../assets/hero.jpg);
   background-size: cover;
@@ -42,6 +47,16 @@
   border-radius: 10000px;
   border: none;
   cursor: pointer;
+}
+
+.freeShipping {
+  padding: 4rem 1rem;
+  /* background-color: var(--light-background-color); */
+  max-width: 900px;
+}
+
+.freeShipping h2 {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 500px) {
