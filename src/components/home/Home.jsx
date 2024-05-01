@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={style.callToAction}>
+        <section className={style.freeShipping}>
           <h2>Free shipping on orders over $50</h2>
           <p>
             Whether you're stocking up on essentials or treating yourself to
