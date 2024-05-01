@@ -4,8 +4,18 @@ import style from "./shop.module.css";
 
 export default function Shop() {
   const { inventory, error, loading, addToCart, fixPrice } = useOutletContext();
-  if (error) return <p>A network error was encountered</p>;
-  if (loading) return <p>Loading...</p>;
+  if (error)
+    return (
+      <main>
+        <p>A network error was encountered</p>
+      </main>
+    );
+  if (loading)
+    return (
+      <main>
+        <p>Loading...</p>
+      </main>
+    );
 
   return (
     <main className={style.main}>
