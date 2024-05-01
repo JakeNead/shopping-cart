@@ -51,13 +51,22 @@
 }
 
 .btn {
-  margin-top: 2rem;
+  margin: 2rem 0 2rem;
   padding: 10px 15px;
   border-radius: 10000px;
   border: none;
   color: var(--light-font-color);
   background-color: var(--button-background-color);
   cursor: pointer;
+  transition: all 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.btn:active {
+  transform: scale(0.99);
 }
 
 @media (min-width: 500px) {

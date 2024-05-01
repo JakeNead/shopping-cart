@@ -41,8 +41,8 @@ h6 {
   --light-font-color: hsl(0, 0%, 100%);
   --light-background-color: hsl(124, 3%, 93%);
   --dark-background-color: hsl(124, 3%, 88%);
-  --highlight-color: #003e29;
-  --button-background-color: #1b5240;
+  --button-background-color: hsl(160, 50%, 21%);
+  --button-hover-color: hsl(160, 50%, 28%);
 }
 
 body {
@@ -81,6 +81,8 @@ nav {
 li * {
   text-decoration: none;
   color: var(--font);
+  padding: 4px 8px;
+  border-radius: 999px;
 }
 .active {
   text-decoration: underline;
@@ -124,8 +126,9 @@ footer {
   text-decoration: none;
   fill: black;
 }
-a:hover {
-  color: rgb(138, 109, 54);
+li *:hover {
+  /* color: rgb(138, 109, 54); */
+  background-color: hsl(124, 3%, 83%);
 }
 
 @media (min-width: 500px) {

@@ -47,6 +47,14 @@
   border-radius: 10000px;
   border: none;
   cursor: pointer;
+  transition: all 0.1s;
+}
+.heroButton:hover {
+  background-color: white;
+}
+
+.heroButton:active {
+  transform: scale(0.99);
 }
 
 .freeShipping {

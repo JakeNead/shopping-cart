@@ -43,4 +43,14 @@
   border-radius: 9999px;
   padding: 5px 10px;
   text-wrap: nowrap;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button:active {
+  transform: scale(0.99);
 }
