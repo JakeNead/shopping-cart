@@ -39,10 +39,10 @@ h6 {
 :root {
   --dark-font-color: hsl(0, 0%, 0%);
   --light-font-color: hsl(0, 0%, 100%);
-  --light-background-color: hsl(0, 0%, 90%);
-  --dark-background-color: hsl(0, 0%, 85%);
-  --highlight-color: hsl(120, 100%, 25%);
-  --button-background-color: hsl(105, 81%, 25%);
+  --light-background-color: hsl(124, 3%, 93%);
+  --dark-background-color: hsl(124, 3%, 88%);
+  --highlight-color: #003e29;
+  --button-background-color: #1b5240;
 }
 
 body {
@@ -110,6 +110,7 @@ footer {
   align-items: center;
   padding: 3rem 1rem;
   gap: 1rem;
+  background-color: var(--light-background-color);
 }
 
 .links {
@@ -123,7 +124,8 @@ footer {
   text-decoration: none;
   fill: black;
 }
-.links svg:visited {
+a:hover {
+  color: rgb(138, 109, 54);
 }
 
 @media (min-width: 500px) {
