@@ -1,9 +1,7 @@
-import { useOutletContext, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import style from "./home.module.css";
 
 export default function Home() {
-  const { inventory, error, loading } = useOutletContext();
-
   return (
     <>
       <main className={style.homeMain}>
