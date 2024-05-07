@@ -90,7 +90,7 @@ export default function Root() {
           <h1>FakeStore</h1>
           <ul className="navLinks">
             <li>
-              <NavLink to={"home"}>Home</NavLink>
+              <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
               <NavLink to={"shop"}>Shop</NavLink>
