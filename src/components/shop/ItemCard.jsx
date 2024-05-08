@@ -1,5 +1,4 @@
 import style from "./itemCard.module.css";
-import { useState } from "react";
 
 export default function ItemCard({ item, addToCart }) {
   const containText = (title) =>
