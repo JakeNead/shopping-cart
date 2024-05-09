@@ -29,7 +29,7 @@ describe("ItemCard component", () => {
     await user.click(button);
     expect(handleClick).toHaveBeenCalled();
   });
-  it("calls add to cart", async () => {
+  it("doesn't call add to cart when button not clicked", async () => {
     const handleClick = vi.fn();
     render(<ItemCard item={mockItem} addToCart={handleClick} />);
     expect(handleClick).not.toHaveBeenCalled();
