@@ -9,7 +9,6 @@ export default function Cart() {
   function subTotalPrice() {
     if (cart) {
       let price = cart.reduce((a, c) => a + c.quantity * c.price, 0);
-      // return Number(price.toFixed(2));
       return parseFloat(price).toFixed(2);
     }
   }
