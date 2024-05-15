@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Header({ cartTotal }) {
   return (
@@ -33,3 +34,6 @@ export default function Header({ cartTotal }) {
     </header>
   );
 }
+Header.propTypes = {
+  cartTotal: PropTypes.func,
+};

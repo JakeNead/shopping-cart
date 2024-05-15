@@ -1,4 +1,5 @@
 import style from "./cartCard.module.css";
+import Proptypes from "prop-types";
 
 export default function CartCard({
   handleChange,
@@ -35,3 +36,10 @@ export default function CartCard({
     </article>
   );
 }
+
+CartCard.propTypes = {
+  handleChange: Proptypes.func,
+  handleDelete: Proptypes.func,
+  item: Proptypes.object,
+  fixPrice: Proptypes.func,
+};

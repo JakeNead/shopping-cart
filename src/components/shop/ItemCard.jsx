@@ -1,4 +1,5 @@
 import style from "./itemCard.module.css";
+import PropTypes from "prop-types";
 
 export default function ItemCard({ item, addToCart }) {
   const containText = (title) =>
@@ -41,3 +42,8 @@ export default function ItemCard({ item, addToCart }) {
     </article>
   );
 }
+
+ItemCard.propTypes = {
+  item: PropTypes.object,
+  addToCart: PropTypes.func,
+};
