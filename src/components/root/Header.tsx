@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export default function Header({ cartTotal }) {
+interface HeaderProps {
+  cartTotal(): number;
+}
+
+export default function Header({ cartTotal }: HeaderProps) {
   return (
     <header>
       <nav>

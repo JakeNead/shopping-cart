@@ -1,6 +1,6 @@
 import style from "./about.module.css";
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <main className={style.main}>
       <header className={style.header}>

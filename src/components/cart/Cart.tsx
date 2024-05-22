@@ -2,15 +2,29 @@ import CartCard from "./CartCard";
 import { useOutletContext, Link } from "react-router-dom";
 import style from "./cart.module.css";
 
-export default function Cart() {
-  const { cart, cartTotal, handleCartChange, handleCartDelete, fixPrice } =
-    useOutletContext();
+interface CartContextProps {
+  cart: [];
+  cartTotal(): number;
+  handleCartChange(): void;
+  handleCartDelete(): void;
+  fixPrice(): number;
+}
 
-  function subTotalPrice() {
+export default function Cart(): JSX.Element {
+  const { cart, cartTotal, handleCartChange, handleCartDelete, fixPrice } =
+    useOutletContext() as CartContextProps;
+
+  interface Cart {
+    quantity: number;
+    price: number;
+  }
+
+  function subTotalPrice(cart: Cart[]): string {
     if (cart) {
-      let price = cart.reduce((a, c) => a + c.quantity * c.price, 0);
-      return parseFloat(price).toFixed(2);
+      let price: number = cart.reduce((a, c) => a + c.quantity * c.price, 0);
+      return price.toFixed(2);
     }
+    throw new Error("Something has gone wrong in subTotalPrice");
   }
   return (
     <main className={style.main}>
@@ -38,24 +52,32 @@ export default function Cart() {
       ) : (
         <>
           <div className={style.cartItems}>
-            {cart.map((item) => (
-              <CartCard
-                key={item.id}
-                item={item}
-                handleChange={handleCartChange}
-                handleDelete={handleCartDelete}
-                fixPrice={fixPrice}
-              />
-            ))}
+            {cart.map(
+              (item: {
+                id: number;
+                image: string;
+                title: string;
+                price: number;
+                quantity: number;
+              }) => (
+                <CartCard
+                  key={item.id}
+                  item={item}
+                  handleChange={handleCartChange}
+                  handleDelete={handleCartDelete}
+                  fixPrice={fixPrice}
+                />
+              )
+            )}
           </div>
           <div className={style.orderSummary}>
             <div className={style.subtotal}>
               <p>Subtotal ({cartTotal()} items)</p>
-              <p>${subTotalPrice()}</p>
+              <p>${subTotalPrice(cart)}</p>
             </div>
             <div className={style.shipping}>
               <p>Shipping</p>
-              <p>{subTotalPrice() > 50 ? "free" : "$9.95"}</p>
+              <p>{Number(subTotalPrice(cart)) > 50 ? "free" : "$9.95"}</p>
             </div>
             <button className={style.button}>Secure Checkout</button>
           </div>

@@ -1,11 +1,23 @@
 import style from "./itemCard.module.css";
-import PropTypes from "prop-types";
 
-export default function ItemCard({ item, addToCart }) {
-  const containText = (title) =>
+interface ItemCardProps {
+  item: {
+    category: string;
+    description: string;
+    image: string;
+    rating: { rate: number; count: number };
+    title: string;
+    id: number;
+    quantity: number;
+    price: number;
+  };
+  addToCart(): void;
+}
+export default function ItemCard({ item, addToCart }: ItemCardProps) {
+  const containText = (title: string) =>
     title.length < 40 ? title : `${title.slice(0, 40)}...`;
 
-  function fixPrice(n) {
+  function fixPrice(n: number) {
     let priceArray = item.price.toString().split(".");
     if (priceArray.length === 1) {
       return `${priceArray}.00`;
@@ -42,8 +54,3 @@ export default function ItemCard({ item, addToCart }) {
     </article>
   );
 }
-
-ItemCard.propTypes = {
-  item: PropTypes.object,
-  addToCart: PropTypes.func,
-};

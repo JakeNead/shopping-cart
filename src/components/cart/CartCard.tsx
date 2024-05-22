@@ -1,12 +1,24 @@
 import style from "./cartCard.module.css";
-import Proptypes from "prop-types";
+
+interface CartCardProps {
+  handleChange(): void;
+  handleDelete(): void;
+  item: {
+    id: number;
+    image: string;
+    title: string;
+    price: number;
+    quantity: number;
+  };
+  fixPrice(n: number): number;
+}
 
 export default function CartCard({
   handleChange,
   handleDelete,
   item,
   fixPrice,
-}) {
+}: CartCardProps): JSX.Element {
   return (
     <article className={style.article}>
       <div className={style.cardTop}>
@@ -36,10 +48,3 @@ export default function CartCard({
     </article>
   );
 }
-
-CartCard.propTypes = {
-  handleChange: Proptypes.func,
-  handleDelete: Proptypes.func,
-  item: Proptypes.object,
-  fixPrice: Proptypes.func,
-};
