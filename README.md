@@ -1,7 +1,7 @@
 # Shopping Cart
 
 ## Overview
-I dipped my toes into a few new tools for this project. I used React Router to handle routing, Testing Library for unit tests, and CSS Modules to compartmentalize components. I initially used PropTypes for type checking but decided to refactor the entire project to Typescript. I had my eye on Typescript for a while and found it easy to define basic types, but form events were more of a challenge. It was a worthwhile detour and I'll be using more typescript in the future.
+I picked up a few new tools for this project. I used React Router to handle routing, Testing Library for unit tests, and CSS Modules to compartmentalize components. I initially used PropTypes for type checking but decided to refactor the entire project to Typescript. I had my eye on Typescript for a while and found it easy to define basic types, but form events were more of a challenge. It was a worthwhile detour and I'll certainly use more typescript in the future.
 
 ## Built With
 Vite, React, React Router, Typescript, CSS Modules, and Testing Library.
