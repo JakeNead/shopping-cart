@@ -7,7 +7,7 @@ export default function Home() {
       <main className={style.homeMain}>
         <section className={style.heroContainer}>
           <div className={style.heroText}>
-            <h1>Welcome to Our FakeStore</h1>
+            <h1>Welcome to TechTrove!</h1>
             <p>
               Discover the latest trends in clothing, electronics, and jewelry!
             </p>

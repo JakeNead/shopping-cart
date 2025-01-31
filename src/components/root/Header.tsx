@@ -9,7 +9,7 @@ export default function Header({ cartTotal }: HeaderProps) {
   return (
     <header>
       <nav>
-        <h1>FakeStore</h1>
+        <h1>TechTrove</h1>
         <ul className="navLinks">
           <li>
             <NavLink to={"/"}>Home</NavLink>
